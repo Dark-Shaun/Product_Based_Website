@@ -1,0 +1,115 @@
+html, body {
+  font-family: "Ubuntu";
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+*:focus {
+  outline: 0 !important;
+}
+
+/* -------------------------------------------------------------------------------(The Bill Form starts here) */
+.container_1{
+
+      margin-top: 40px;
+
+}
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.border-top-gray { border-top-color: #adb5bd; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.lh-condensed { line-height: 1.25; }
+/* --------------------------------------------------------------------------------------(G-mail type input ) */
+input[type="text"],input[type="email"] {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(3em);
+  margin: 0 0 1em;
+  padding: 6px;
+  border: 1px solid #bababa;
+  border-radius: 3px;
+  background: #fff;
+	font-size: 16px;
+  resize: none;
+
+}
+input[type="text"]:focus,input[type="email"]:focus {
+  border-color: #fe696a;
+
+}
+input[type="text"]:focus + label[placeholder]:before,input[type="email"]:focus + label[placeholder]:before {
+  color: #fe696a;
+
+}
+input[type="text"]:focus + label[placeholder]:before,
+input[type="text"]:valid + label[placeholder]:before,input[type="email"]:focus + label[placeholder]:before,
+input[type="email"]:valid + label[placeholder]:before  {
+  transition-duration: .2s;
+  transform: translate(0, -2.7em) scale(1.2, 1.2);
+	/* font-weight: bold; */
+
+}
+input[type="text"]:valid,input[type="email"]:valid {
+border-color:#fe696a;
+
+}
+input[type="text"]:valid + label[placeholder]:before,input[type="email"]:valid + label[placeholder]:before {
+	color:#fe696a ;
+
+}
+input[type="text"]:invalid + label[placeholder][alt]:before,input[type="email"]:invalid + label[placeholder][alt]:before {
+  content: attr(alt);
+
+}
+input[type="text"] + label[placeholder],input[type="email"] + label[placeholder]  {
+  display: block;
+  pointer-events: none;
+  line-height: 1.25em;
+  margin-top: calc(-3em - 2px);
+  margin-bottom: calc((3em - 1em) + 2px);
+
+}
+input[type="text"] + label[placeholder]:before,input[type="email"] + label[placeholder]:before {
+  content: attr(placeholder);
+  display: inline-block;
+  margin: 0 calc(0.5em + 2px);
+  padding: 0 2px;
+  color: #7d7d7d;
+  white-space: nowrap;
+  transition: 0.3s ease-in-out;
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+/* ----------------------------------------------------------------------------------------------------------------(Payment button) */
+.payment_button{
+  color:rgba(27, 38, 44, 0.9);
+  background-color:#fe696a;
+  border-color: transparent;
+}
+.payment_button:hover{
+  color:#fe696a;
+  background-color: rgba(27, 38, 44, 0.9) ;
+  border-color: transparent;
+
+}
+.payment_button:focus{
+  color:rgba(27, 38, 44, 0.9) !important;
+  background-color:#fe696a !important;
+  border-color: transparent;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+         transform: translateY(4px);
+
+}
+
+#country{
+  height: 48px;
+}
+#country:valid,#country:focus{
+  border-color:#fe696a;
+}

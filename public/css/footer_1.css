@@ -1,0 +1,164 @@
+*:focus {
+  outline: 0 !important;
+}
+*:active{
+  outline: 0 !important;
+}
+
+hr {
+  background-color: white;
+  opacity: 0;
+}
+footer{
+  background-color:rgba(27, 38, 44, 0.9);
+   font-family: "Ubuntu";
+}
+
+.size {
+  width: 20rem;
+}
+
+
+.catalogue {
+  /* padding-left: 70px; */
+  line-height: 16px;
+  color:white;
+  /* margin:10px; */
+
+}
+.catalogue h5{
+  color:#fe696a;
+}
+.subscribe{
+  color:white;
+}
+.subscribe h5{
+    color:#fe696a;
+}
+
+.shipping {
+  line-height: 16px;
+  color:white;
+
+}
+.shipping h5{
+      color:#fe696a;
+}
+
+.sub_button {
+  height: 40px;
+  width: 100px;
+  background: #fe696a;
+  color: white;
+  border: none;
+  margin-top: 20px;
+}
+
+.sub_button:active {
+  border: none;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.shape {
+  position: relative;
+
+  top: 5px;
+  display: inline-block;
+
+}
+
+.shape_1, .shape_2, .shape_3, .shape_4 {
+  float: right;
+  color:white;
+}
+
+.fa-rocket {
+  font-size: 2.5rem;
+  color:white;
+
+}
+
+.fa-rocket:hover {
+  color: #fe696a;
+}
+
+.fa-money-check-alt {
+  font-size: 2.5rem;
+  color:white;
+
+}
+
+.fa-money-check-alt:hover {
+  color: #fe696a;
+}
+
+.fa-credit-card {
+  font-size: 2.5rem;
+  color:white;
+
+}
+
+.fa-credit-card:hover {
+  color: #fe696a;
+}
+
+.fa-headphones-alt {
+  font-size: 2.5rem;
+  color:white;
+
+}
+
+.fa-headphones-alt:hover {
+  color: #fe696a;
+}
+
+
+
+#email:focus {
+  border: none;
+  border-color:transparent;
+  box-shadow: 0 0 5px rgba(27, 38, 44, 0.9) !important;
+  /* border:2px solid  #1b262c; */
+}
+
+#email:active {
+  border: none;
+  border-color:transparent;
+  box-shadow: 0 0 5px rgba(27, 38, 44, 0.9) !important;
+  /* border:2px solid  #1b262c; */
+}
+.connect a{
+  text-decoration: none;
+  color:white;
+  display: flex;
+  justify-content: center;
+}
+.feather{
+  color: white;
+  font-size: 28px;
+  transition: 300ms;
+}
+.feather:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  color: #fe696a;
+}
+
+#email {
+  outline-color: transparent !important;
+  border: none !important;
+  box-shadow: 0 0 5px rgba(27, 38, 44, 0.9) !important;
+}
+
+
+@media (min-width:320px) and (max-width:768px) {
+  hr {
+    opacity: 0;
+  }
+
+
+  .policy{
+    display: none;
+  }
+}
