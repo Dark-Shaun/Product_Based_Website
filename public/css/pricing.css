@@ -400,39 +400,59 @@ text-decoration: none;
 }
 
 .wallet_button{
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  position: absolute;
-  right: 10%;
- border-radius:50%;
- height: 55px;
- width: 55px;
+  display: inline-block;
+ width: 282px;
  border:1px solid transparent;
  background-color: rgba(27, 38, 44, 1) !important;
  cursor: pointer;
- /* display: none; */
  z-index:1;
  outline: none !important;
+ font-size: 1.5rem;
+ letter-spacing: 5px;
+ transition: all 0.5s;
 }
-.wallet_button:hover{
+ .wallet_button:active{
   transform: translateY(4px);
   outline: none !important;
-  border:none !important;
+ 
   box-shadow: none !important;
 }
 .wallet_button span{
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
+
+
+.wallet_button span:after {
+  /* font-family:"Font Awesome 5 Free";
+  content: '\f555'; */
+  /* font-family: "Font Awesome 5 Free"; */
+  font-weight: 900;
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.wallet_button:hover span {
+  padding-right: 25px;
+ }
+
+.wallet_button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 /* ---------------------------------------------------------------------------------------------------- */
 
  #exampleModal{
   font-family:"Ubuntu";
-  /* overflow-x: hidden; */
+  
  }
 
  .modal-open{

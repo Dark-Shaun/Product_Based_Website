@@ -52,29 +52,8 @@
     <div class="text-center ">
       <div class="price_head ">
         <h1>Pricing</h1>
-        <button type="button" class="btn btn-dark wallet_button" data-toggle="modal" data-target="#exampleModal">
-          <span><i class="fas fa-wallet"></i></span>
-        </button>
-        <!-- Modal -->
-<div class="modal fade animate__animated animate__bounceIn " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Wallet</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Amount:<span>$100</span>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-dark">Add Money to Wallet</button>
-      </div>
-    </div>
-  </div>
-</div>
+        
+        
         
        
       </div>
@@ -146,6 +125,37 @@
             </div>
           </div>
         </div>
+
+      </div>
+
+      <div class="row mt-5">
+        <div class="col text-center">
+          <button type="button" class="btn btn-dark btn-lg wallet_button " data-toggle="modal" data-target="#exampleModal"><span>Add to Wallet</span></button>  
+          <!-- <button type="button" class="btn btn-dark wallet_button" data-toggle="modal" data-target="#exampleModal">
+          <span><i class="fas fa-wallet"></i></span>
+        </button> -->
+          <!-- Modal -->
+<div class="modal fade animate__animated animate__bounceIn " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Wallet</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Amount:<span>$100</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark">Add Money to Wallet</button>
+      </div>
+    </div>
+  </div>
+</div> 
+        </div>
+        
 
       </div>
 
@@ -370,19 +380,9 @@
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
   <script src="js/price.js"></script>
   <script>
-    $(".wallet_button").on("click",function(){
-      $(".wallet_price").addClass("wallet_toggle");
-    })
+    
 
-    $(" .wallet_price").on("click",function(){
-      $(".wallet_price").removeClass("wallet_toggle");
-    })
-
-//     $('#myModal').on('show.bs.modal', function () {
-//   $('#myInput').trigger('focus')
-  
-  
-// })
+   
 
 
 
