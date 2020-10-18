@@ -426,21 +426,23 @@ text-decoration: none;
 
 
 .wallet_button span:after {
-  /* font-family:"Font Awesome 5 Free";
-  content: '\f555'; */
+  font-family:"Font Awesome 5 Free";
+  content: '\f555';
   /* font-family: "Font Awesome 5 Free"; */
   font-weight: 900;
-  content: "\00bb";
+  /* content: "\00bb"; */ 
   position: absolute;
   opacity: 0;
   top: 0;
   right: 0;
   transition: 0.5s;
+  font-size:1.3rem;
   color: #fff;
 }
 
 .wallet_button:hover span {
-  padding-right: 25px;
+  padding-right: 35px;
+  padding-left: 10px;
  }
 
 .wallet_button:hover span:after {

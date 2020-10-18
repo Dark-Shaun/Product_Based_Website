@@ -98,6 +98,31 @@ app.post('/product-page',(req,res)=>{
     res.redirect("/product-page");
 })
 
+// cart 
+app.get('/product-page/cart',(req,res)=>{
+    res.render('cart',{});
+})
+
+app.post('/product-page/cart',(req,res)=>{
+    const subscribe_mail=req.body.subscribe_mail;
+    const search = req.body.search;
+    // console.log(search)
+    res.redirect("/product-page/cart");
+})
+
+//wishlist
+app.get('/product-page/wishlist',(req,res)=>{
+    res.render('wishlist',{});
+})
+
+app.post('/product-page/wishlist',(req,res)=>{
+    const subscribe_mail=req.body.subscribe_mail;
+    const search = req.body.search;
+    // console.log(search)
+    res.redirect("/product-page/wishlist");
+})
+
+
 //To listen and start the server.
 app.listen('3000',()=>{
     console.log('Server is Started Sucessfully');

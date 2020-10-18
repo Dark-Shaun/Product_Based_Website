@@ -36,44 +36,15 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
           class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-5 my-lg-0">
-          <li class="nav-item mx-3">
-            <a class="nav-link js-scroll-trigger mt-1" href="#" data-toggle="modal" data-target="#exampleModal" role="button" ><i class="fas fa-shopping-cart "></i></a>
-            <!-- Button trigger modal -->
-          <!-- Modal -->
-          <div class="modal fade animate__animate animate__bounceIn" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-md" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-                </div>
-                <div class="modal-body">
-                  <table>
-                    
-                    <tr>
-                      <td><button type="button" class="close mx-2" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
-                      <td class="table_img"><img src="https://demo.createx.studio/cartzilla/img/shop/catalog/58.jpg" class="rounded mx-auto d-block" alt="..." width="100" height="100"></td>
-                      <td >
-                      <span class="table_text">Wireless Earphone </span>
-                      </td>
-                      <td>
-                        <input type="number" value="0" min="1" max="5" step="1" class="count pl-3 border-top-0 border-left-0 border-right-0 "/>
-                      </td>
-                      <td class="price">$100</td>
-                    </tr>
-                  </table>
-                 
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-dark cart_close" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn checkout">Checkout</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        <ul class="navbar-nav ml-auto my-4 my-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link js-scroll-trigger " href="/product-page/wishlist" role="button" ><i class="far fa-heart"></i><span class="badge badge-pill badge-dark">0</span></a>
           </li>
-          <li class="nav-item dropdown mx-3">
-            <a class="nav-link js-scroll-trigger mt-1" href="#" id="navbarDropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wallet"></i></a>
+          <li class="nav-item ">
+            <a class="nav-link js-scroll-trigger " href="/product-page/cart"  role="button" ><i class="fas fa-shopping-cart "></i><span class="badge badge-pill badge-dark">0</span></a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link js-scroll-trigger " href="#" id="navbarDropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wallet"></i></a>
             <div class="dropdown-menu py-3 px-1 mt-2 wallet_1 dm_1" aria-labelledby="navbarDropdown" > 
               <div class="text-center ">
                   <p class="dropdown-item">Wallet<i class="fas fa-wallet ml-2"></i></p>
