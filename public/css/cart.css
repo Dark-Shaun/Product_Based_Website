@@ -1,0 +1,182 @@
+html, body {
+    font-family: "Ubuntu";
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  *:focus {
+    outline: 0 !important;
+  }
+  .badge{
+    background:transparent;
+}
+
+.top{
+    padding-top: 8rem;
+}
+.top h1{
+    letter-spacing: 3.7px;
+
+}
+
+  /* --------------------------------------------------------------------------------------(Search button) */
+.search_1 {
+  
+    padding-top: 8rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+    display: none;
+   
+  }
+  
+  .search_1:valid,.search_1:focus,.search_1:hover{
+    outline: none;
+    border-color: transparent;
+  }
+  .srch{
+    width: 40px !important;
+    height: 40px !important;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 50% !important;
+  }
+  .srch:hover{
+    background-color:#fe696a !important ;
+    border-color: none !important;
+    outline: 0 !important;
+  
+  }
+  .srch_1:active{
+    background-color:#fe696a !important ;
+    border-color: none !important;
+    outline: none !important;
+    transform: translateY(4px);
+  }
+  .srch_1:focus,.srch_1:focus-within,.srch_1:visited{
+    background-color:#fe696a !important ;
+    border-color: none !important;
+    outline: 0 !important;
+  }
+  
+  .fc {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 3rem;
+  }
+  
+  .srch_1{
+    position: absolute;
+    left:4rem;
+    width: 40px !important;
+    height: 40px !important;
+    margin-left: 5px;
+    margin-top: 1.5px;
+    border-color:transparent  !important;
+    border-radius: 50%;
+  }
+  .srch_1:hover{
+    background-color:#fe696a !important ;
+    border-color: transparent !important;
+    outline: 0 !important;
+  
+  }
+  .srch_1:active{
+    border-color: none !important;
+    outline: 0 !important;
+    transform: translateY(4px);
+  
+  }
+  .srch_1:focus{
+    background-color:#fe696a !important ;
+    border-color: none !important;
+    outline: 0 !important;
+  }
+  .fc_1{
+    position: absolute; 
+    width: 35rem !important;
+    height: 45px;
+    left:4rem;
+    padding-left: 3rem;
+  }
+  .fc_1:focus{
+    box-shadow: 0 0 5px rgba(27, 38, 44, 0.9) !important;
+    border-color:  #fe696a !important;
+  }
+  
+  .input-group-prepend {
+    display: flex;
+    position: relative;
+  }
+  
+  input:focus{
+    box-shadow: 0 0 5px rgba(27, 38, 44, 0.9) !important;
+    border-color:  #fe696a !important;
+  }
+  
+  .fa-shopping-cart,.fa-wallet{
+    font-size: 1rem;
+  }
+
+
+  @media (min-width:320px) and (max-width:986px) {
+    .search_1{
+      display: inline;
+    
+    }
+    .search_2{
+      display: none;
+    }
+    .input-group-prepend {
+      display: flex;
+      padding-top: 6rem !important;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      /* padding-bottom: 2rem; */
+    } 
+  }
+  
+  /* ----------------------------------------------------------------------------------------------------(Tablet) */
+  @media (min-width:320px) and (max-width:374px) {
+  
+  
+    .fc {
+      width: 90%;
+    }
+  }
+  
+  /* --------------------------------------------------------------------------------- */
+  @media (min-width:375px) and (max-width:425px) {
+  
+  
+    .fc {
+      width: 92%;
+    }
+  }
+  
+  /* ------------------------------------------------------------------------------------------------() */
+  @media (min-width:425px) and (max-width:768px) {
+  
+  
+    .fc {
+      width: 94%;
+    }
+  }
+  
+  /* ------------------------------------------------------------------------------------------------------ */
+  @media (min-width:768px) and (max-width:1024px) {
+    .fc_1{
+      position: absolute; 
+      width: 25rem !important;
+      height: 45px;
+      left:4rem;
+      padding-left: 3rem;
+    }
+  
+    hr {
+      opacity: 0;
+    }
+  }
