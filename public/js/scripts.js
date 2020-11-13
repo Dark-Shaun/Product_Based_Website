@@ -28,7 +28,7 @@
 
   // Collapse Navbar
   var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
+    if ($("#mainNav").offset().top > 500) {
       $("#mainNav").addClass("navbar-scrolled");
     } else {
       $("#mainNav").removeClass("navbar-scrolled");
@@ -62,7 +62,7 @@
 
 
 $("#navbarDropdown").on("click", function(){
-  $(".dropdown-menu").slideToggle(400);
+  $(".dropdown-menu").slideToggle(300);
 });
 
 $(".card").on("mouseover", function(){
@@ -103,12 +103,16 @@ $(window).scroll( function(){
   
   $('.container-fluid .row').each( function(i){
       
-      var bottom_of_object = $(this).position().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      var bottom_of_object = $(this).position().top -200; 
+      //+ $(this).outerHeight(); 
+      // $(this).position().top +
+      var bottom_of_window = $(window).scrollTop()+220;
+      //+ $(window).height();
       
       if( bottom_of_window > bottom_of_object ){
           
-          $(this).animate({opacity:1},800);
+          $(this).animate({opacity:1},0);
+          // $(this).fadeIn();
               
       }
       

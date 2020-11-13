@@ -27,26 +27,29 @@ app.get('/login',(req,res)=>{
 })
 
 app.post("/login",(req,res)=>{
-    const email_1=req.body.email_1;
-    const email_2=req.body.email_2;
-    const password_1 = req.body.password_1;
-    const password_2 = req.body.password_2;
-    const password_3 = req.body.password_3;
-    const firstname=req.body.firstname;
-    const lastname = req.body.lastname;
-    const forgetpassword_email=req.body.forgetpassword_email;
-    
-    
-
-    res.redirect("/login");
-    
+      
 })
 
 
-//  Sign up Page 
-// app.get('/sign-up',(req,res)=>{
-//     res.render('cover',{});
-// })
+//Sign Up Page
+app.get('/signup',(req,res)=>{
+    res.render('signup',{});
+})
+
+app.post("/signup",(req,res)=>{
+      
+})
+
+//Forgot Password
+app.get('/fpassword',(req,res)=>{
+    res.render('fpassword',{});
+})
+
+app.post("/fpassword",(req,res)=>{
+      
+})
+
+
 // Pricing Page 
 app.get('/pricing',(req,res)=>{
     res.render('pricing',{});
@@ -122,6 +125,13 @@ app.post('/product-page/wishlist',(req,res)=>{
     res.redirect("/product-page/wishlist");
 })
 
+//Indiviual Product Page
+app.get('/product-page/product-name',(req,res)=>{
+    res.render('indiviual',{});
+})
+app.post('/product-page/product-name',(req,res)=>{
+
+})
 
 //To listen and start the server.
 app.listen('3000',()=>{

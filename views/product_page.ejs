@@ -5,28 +5,28 @@
   <meta charset="utf-8">
   <title>Product Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86"> -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kalam:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  
   <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;700&family=Source+Code+Pro&family=Source+Sans+Pro:ital,wght@0,700;0,900;1,900&display=swap" rel="stylesheet">
-  <link href="css/hover-min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/product_page.css">
-  <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/footer_1.css">
 </head>
 
 <body>
 
+
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
     <div class="container">
-      <a class="navbar-brand " href="/">Brand Name</a>
+      <a class="navbar-brand" href="/">Brand Name</a>
       
       <form class="form-inline flex-nowrap rounded search_2 mx-0" action="/product-page" method="POST">
-          <div class="input-group-prepend">
+          <div class="input-group-prepend search_div">
             <button class="btn btn-outline-secondary srch_1" type="submit"><i class="fa fa-search" style="color:rgba(27, 38, 44, 0.9) "></i></button>
             <input type="search" class="form-control fc_1" placeholder="Search" name="search">
           </div>
@@ -38,10 +38,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-4 my-lg-0">
           <li class="nav-item ">
-            <a class="nav-link js-scroll-trigger " href="/product-page/wishlist" role="button" ><i class="far fa-heart"></i><span class="badge badge-pill badge-dark">0</span></a>
+            <a class="nav-link js-scroll-trigger " href="/product-page/wishlist" role="button" ><i class="far fa-heart"></i><span class="badge badge-pill badge-dark " id="badge-heart">0</span></a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link js-scroll-trigger " href="/product-page/cart"  role="button" ><i class="fas fa-shopping-cart "></i><span class="badge badge-pill badge-dark">0</span></a>
+            <a class="nav-link js-scroll-trigger " href="/product-page/cart"  role="button" ><i class="fas fa-shopping-cart "></i><span class="badge badge-pill badge-dark " id="badge-cart">0</span></a>
           </li>
           <li class="nav-item dropdown ">
             <a class="nav-link js-scroll-trigger " href="#" id="navbarDropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wallet"></i></a>
@@ -75,9 +75,9 @@
 
   <form action="/product-page" method="POST">
   <div class="search_1">
-    <div class="input-group-prepend">
+    <div class="input-group-prepend search_div">
       <span><button class="btn btn-outline-secondary srch" type="button"><i class="fa fa-search"></i></button></span>
-      <input type="text" class="form-control fc" placeholder="" aria-label="" aria-describedby="basic-addon1">
+      <input type="search" class="form-control fc" placeholder="" aria-label="" aria-describedby="basic-addon1">
     </div>
 
   </div>
@@ -85,10 +85,10 @@
 
 
   <div class="product_page">
-    <div class="row first px-4">
+    <div class="row px-4">
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like" id="like_1">
                 <i class="far fa-heart"></i>
@@ -129,7 +129,7 @@
       </div>
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like" id="like_2">
                 <i class="far fa-heart"></i>
@@ -168,7 +168,7 @@
       </div>
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like" id="like_3">
                 <i class="far fa-heart"></i>
@@ -206,7 +206,7 @@
       </div>
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like" id="like_4">
                 <i class="far fa-heart"></i>
@@ -247,7 +247,7 @@
     <div class="row  px-4">
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like" id="like_5">
                 <i class="far fa-heart"></i>
@@ -285,7 +285,7 @@
       </div>
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like" id="like_6">
                 <i class="far fa-heart"></i>
@@ -323,7 +323,7 @@
       </div>
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like " id="like_7">
                 <i class="far fa-heart"></i>
@@ -361,7 +361,7 @@
       </div>
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like " id="like_8">
                 <i class="far fa-heart"></i>
@@ -401,7 +401,7 @@
     <div class="row  px-4">
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like" id="like_9">
                 <i class="far fa-heart"></i>
@@ -439,7 +439,7 @@
       </div>
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like" id="like_10">
                 <i class="far fa-heart"></i>
@@ -477,7 +477,7 @@
       </div>
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like" id="like_11">
                 <i class="far fa-heart"></i>
@@ -515,7 +515,7 @@
       </div>
       <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 py-3 fade-in">
         <div class="d-flex justify-content-center">
-          <div class="card ">
+          <div class="card card_2">
             <span class="actions pt-2 px-2 d-flex justify-content-between">
               <button data-toggle="tooltip" data-placement="bottom" title="Like" class="rounded-circle px-1 d-flex justify-content-center align-items-center like " id="like_12">
                 <i class="far fa-heart"></i>
