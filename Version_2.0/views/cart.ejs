@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+  <meta name="author" content="">
+    <title>Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kalam:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;700&family=Source+Code+Pro&family=Source+Sans+Pro:ital,wght@0,700;0,900;1,900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" integrity="sha512-WEQNv9d3+sqyHjrqUZobDhFARZDko2wpWdfcpv44lsypsSuMO0kHGd3MQ8rrsBn/Qa39VojphdU6CMkpJUmDVw==" crossorigin="anonymous" /> 
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  
+   <link rel="stylesheet" href="/css/footer_1.css" type="text/css" media="all">
+   
+   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand " href="/">Brand Name</a>
+          
+          <form class="form-inline flex-nowrap rounded search_2 mx-0" action="/product-page" method="POST">
+              <div class="input-group-prepend search_div">
+                <button class="btn btn-outline-secondary srch_1" type="submit"><i class="fa fa-search" style="color:rgba(27, 38, 44, 0.9) "></i></button>
+                <input type="search" class="form-control fc_1" placeholder="Search" name="search">
+              </div>
+            </form>
+              
+          
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+              class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto my-4 my-lg-0">
+              <li class="nav-item ">
+                <a class="nav-link js-scroll-trigger " href="/product-page/wishlist" role="button" ><i class="far fa-heart "></i><span class="badge badge-pill badge-dark">0</span></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link js-scroll-trigger " href="/product-page/cart"  role="button" ><i class="fas fa-shopping-cart active "></i><span class="badge badge-pill badge-dark">0</span></a>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link js-scroll-trigger " href="#" id="navbarDropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wallet"></i></a>
+                <div class="dropdown-menu py-3 px-1 mt-2 wallet_1 dm_1" aria-labelledby="navbarDropdown" > 
+                  <div class="text-center ">
+                      <p class="dropdown-item">Wallet<i class="fas fa-wallet ml-2"></i></p>
+                      <div class="dropdown-divider"></div>
+                      <p > <span>Amount:</span><span class="mr-1">$100</span></p>
+                      <button class="btn btn-dark" data-toggle="tooltip" data-placement="bottom" title="Add to Wallet"><i class="fas fa-wallet mr-1"></i> +</button>
+                    </div>
+                   
+                 
+                  
+                </div>
+              </li>
+              <li class="nav-item dropdown d-flex align-items-center">
+                <a class="nav-link hvr-icon-hang" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Hi,Name <i class="fa fa-chevron-down hvr-icon"></i>
+                </a>
+                <div class="dropdown-menu dm_2" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Log-out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> 
+
+
+
+      <div class="text-center top ">
+        <h1 class="display-3 font-weight-bold wishlist"><strong>Cart</strong></h1>
+     </div>
+     <div class="container ">
+        <div class="row justify-content-center my-3">
+            <div class="col-lg-1 d-flex justify-content-end p-0 col_1">
+             <button type="button" class="close" aria-label="Close">
+                 <span aria-hidden="true" class="" >&times;</span>
+               </button>
+            </div>
+            <div class="col-lg-2 d-flex align-items-center">
+              <a href="https://demo.createx.studio/cartzilla/img/shop/catalog/58.jpg" class="image-popup-no-margins mx-auto">
+                <img src="https://demo.createx.studio/cartzilla/img/shop/catalog/58.jpg" alt="" width="100" height="100" class="mx-auto img">
+
+              </a>
+            </div>
+            <div class="col-lg-2 d-flex align-items-center p-2 justify-content-center">
+             <!-- <div class="text-center p-1"> -->
+                  <a href="" style="text-decoration: none;color:black;"><strong>Wireless Headphones</strong></a>
+             <!-- </div> -->
+            </div>
+            <div class="col-lg-2 d-flex align-items-center p-2 justify-content-center" style="color:grey">
+             <!-- <div class="text-center p-1 "> -->
+                <span>$</span><strong>100.00</strong>
+             <!-- </div> -->
+            </div>
+            <div class="col-lg-1 d-flex align-items-center p-2 justify-content-center">
+             <!-- <button type="button" class="btn checkout">Checkout</button> -->
+             <select class="form-control form-control-sm quantity">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            </div>
+            <div class="col-lg-2 d-flex align-items-center p-2 justify-content-center" style="color:grey">
+              <!-- <div class="text-center p-1 "> -->
+                  <span>$</span><strong>100.00</strong>
+              <!-- </div> -->
+             </div>
+        </div>
+
+        
+
+      <div class=" d-flex justify-content-end px-4 mr-2 checkout_div">
+        <a href="/billing" style="text-decoration: none;"><button class="btn  checkout"><span>Checkout</span></button></a>
+      </div>
+      
+     
+
+     
+      
+     </div>
+   
+
+
+
+      <footer id="footer" >
+        <div class="p-4 w-100">
+          <div class="row">
+  
+            <div class="col-lg-4 col-md-6 col-sm-12 catalogue">
+              <div class="d-flex justify-content-center">
+                <div class="size">
+                  <div class="text-left">
+  
+  
+  
+                    <h5>Shop Departments</h5>
+                    <br>
+                    <p>Appliances</p>
+                    <p>Comapny Approval</p>
+                    <p>Buisness Product</p>
+                    <p>Computer</p>
+                    <p>Television</p>
+                    <p>Shorts</p>
+                    <p>Laptops</p>
+                    <p>Accessories</p>
+                    <p>Refridgerator</p>
+                    <p>Apple Appliances</p>
+                    <p>Electonical Appliances</p>
+  
+  
+  
+                  </div>
+                </div>
+  
+  
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 shipping">
+              <div class="d-flex justify-content-center">
+                <div class="size">
+                  <div class="text-left">
+                    <h5>Accounts and Shipping Info</h5>
+                    <br>
+                    <p>Your Account</p>
+                    <p>Shipping rates & policies</p>
+                    <p>Refunds and Replacements</p>
+                    <p>Order Tracking</p>
+                    <p>Delivery Info</p>
+                    <p>Taxes &Fees</p>
+                    <br>
+  
+                    <h5>About Us</h5>
+                    <br>
+                    <p>About Company</p>
+                    <p>Our Teams</p>
+                    <p>Careers</p>
+                    <p>News</p>
+  
+                  </div>
+  
+                </div>
+  
+  
+              </div>
+  
+              <hr>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 subscribe">
+              <div class="d-flex justify-content-center">
+                <div class="text-left">
+                  <h5>Stay Informed</h5>
+                  <hr>
+                  <form class="" action="/product-page/cart" method="post">
+  
+  
+                    <input type="email" class="form-control" placeholder="Enter email" id="email" name="subscribe_mail">
+                    <small>*If you want to be informed about our new Product.</small>
+  
+                    <div class="float-right">
+                      <button type="submit" name="button" class="m-1 rounded sub_button">Subscribe</button>
+  
+                    </div>
+                  </form>
+                  <div class="connect" id="connect">
+                    <br>
+                    <h5 class="mt-5 text-center">Connect with Us</h5>
+  
+                    <a href="mailto:comapny@example.com" class="mt-3">Mail us</a><br>
+                    <div class="d-flex justify-content-center icon mb-3">
+                      <i class="fab fa-google feather "></i>
+                      <i class="fab fa-twitter feather  ml-5"></i>
+                      <i class="fab fa-facebook feather  ml-5"></i>
+                    </div>
+                    <p class="text-center mt-4">&copy; Company Name Ltd<p>
+  
+  
+  
+                  </div>
+  
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+          <hr>
+          <div class="row mt-4 policy">
+            <div class="col-lg-3 col-md-4 col-sm-12">
+              <div class="justify-content-center">
+                <span><i class="fas fa-rocket "></i></span>
+                <div class=" shape_1">
+                  <div class="text-right">
+  
+                    <h6>Free and Fast Delivery</h6>
+                    <small>Free Delivery for cart above 200$</small>
+                  </div>
+  
+                </div>
+  
+  
+              </div>
+              <hr>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+              <div class="justify-content-center">
+                <span><i class="fas fa-money-check-alt"></i></span>
+  
+  
+  
+                <div class=" shape_2">
+                  <div class="text-right">
+  
+                    <h6>Money Back Policy</h6>
+                    <small>We refund payments within 30days</small>
+                  </div>
+  
+                </div>
+  
+  
+                <hr>
+              </div>
+  
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+              <div class="justify-content-center">
+                <div class=" shape">
+                  <i class="far fa-credit-card"></i>
+                </div>
+  
+                <div class=" shape_3">
+                  <div class="text-right">
+  
+                    <h6>Secure Online Payment</h6>
+                    <small>Excellent online payment services.</small>
+                  </div>
+  
+                </div>
+  
+  
+                <hr>
+              </div>
+  
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+              <div class="justify-content-center">
+                <div class="shape">
+                  <i class="fas fa-headphones-alt"></i>
+                </div>
+  
+                <div class=" shape_4">
+                  <div class="text-right">
+  
+                    <h6>24/7 customer support</h6>
+                    <small>Friendly 24/7 customer support</small>
+                  </div>
+  
+                </div>
+  
+  
+              </div>
+              <hr>
+            </div>
+  
+          </div>
+  
+        </div>
+      </footer>
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw==" crossorigin="anonymous"></script>    <script>
+      $('.image-popup-no-margins').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+  });
+  
+  $("#navbarDropdown").on("click", function(){
+    $(".dm_2").slideToggle(300);
+   
+      });
+
+    $("#navbarDropdown_1").on("click", function(){
+      $(".dm_1").slideToggle(300);
+      
+      });
+
+     
+    </script>
+</body>
+</html>
