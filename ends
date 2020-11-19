@@ -1,0 +1,65 @@
+[33mcommit cc584d3a91df976aa697f9120373e42298ec6755[m[33m ([m[1;36mHEAD -> [m[1;32mversion_2[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Thu Nov 19 22:45:40 2020 +0530
+
+    Version_2
+
+[33mcommit 6f4a84e3358bf3bd729ba8f3c6b3133cae4aa457[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Fri Nov 13 14:32:41 2020 +0530
+
+    V_1
+
+[33mcommit 9aab6acec12bab49a640827ce938c6bbd5be7644[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Fri Nov 13 14:28:32 2020 +0530
+
+    ..
+
+[33mcommit 0e899f74a1ec5bf31c938d4b54d1d1bfa64145dd[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Fri Nov 13 14:26:18 2020 +0530
+
+    V_1
+
+[33mcommit 3845bdde017affa63b757714666c1d258bd8cde5[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Fri Nov 13 14:26:06 2020 +0530
+
+    V_1
+
+[33mcommit 71e2a28602927d852d1a86512a6d30261935e914[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Fri Nov 13 13:42:45 2020 +0530
+
+    Version 2.0 of with all Pages ready and Checked(minor changes may be possible but all fine)
+
+[33mcommit 868630a967bc7ea0346ca8157eba5904f6640f2d[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Wed Oct 21 14:19:46 2020 +0530
+
+    Cart Made
+
+[33mcommit 5275e3939a3dfe67dc3ad28edd2268884e12be2c[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Mon Oct 19 00:28:07 2020 +0530
+
+    With Cart and Wishlist Ejs made
+
+[33mcommit 161fe62e675b3ab41d03b2248545378b7e8f83ed[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Sun Oct 18 17:17:33 2020 +0530
+
+    Chnages in Pricing Table
+
+[33mcommit 79f47721d4037789bd8859fd6a906b88f93fbcea[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Sun Oct 18 16:18:50 2020 +0530
+
+    Second Commit
+
+[33mcommit e109a1b5d40fd0fc38a84f348dc835feea914ecf[m
+Author: Shaunak Alshi <you@example.com>
+Date:   Sun Oct 18 16:02:53 2020 +0530
+
+    First Commit with Node.js
