@@ -39,22 +39,7 @@
         // Collapse the navbar when page is scrolled
         $(window).scroll(navbarCollapse);
       
-        // Magnific popup calls
-        // $('#portfolio').magnificPopup({
-        //   delegate: 'a',
-        //   type: 'image',
-        //   tLoading: 'Loading image #%curr%...',
-        //   mainClass: 'mfp-img-mobile',
-        //   gallery: {
-        //     enabled: true,
-        //     navigateByImgClick: true,
-        //     preload: [0, 1]
-        //   },
-        //   image: {
-        //     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-        //   }
-        // });
-       //initiate the plugin and pass the id of the div containing gallery images
+        
 $('#zoom_03').ezPlus({
   zoomType: 'lens',
   lensShape: 'round',
@@ -73,18 +58,6 @@ $('#zoom_03').ezPlus({
 
 
 
-// =====================   
-// information tabs
-// =====================
-
-// var info = document.querySelectorAll(".review-and-info .nav .nav-link");
-
-// for(var i=0; i<info.length; i++){
-//   info[i].addEventListener("click",function(){
-//     document.querySelector(".active").classList.remove("active");
-//     this.classList.add("active");
-//   })
-// }
 
 
 var specification = document.querySelector(".specification");

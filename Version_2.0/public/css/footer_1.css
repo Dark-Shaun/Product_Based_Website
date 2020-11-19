@@ -753,6 +753,9 @@ button.rounded-circle:hover {
 .fa-shopping-cart,.fa-wallet{
   font-size: 1rem;
 }
+.tprice{
+  padding-left: 105px;
+}
 
 .checkout{
   position: relative;
@@ -761,7 +764,7 @@ button.rounded-circle:hover {
   border-radius:0 !important;
   width:180px;
   height:45px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   font-size:1.1rem;
   letter-spacing: 2px;
 }
@@ -1761,6 +1764,9 @@ footer{
 
   .row div{
     margin-top:5px;
+  }
+  .tprice{
+    padding: 0 ;
   }
 
   .checkout{

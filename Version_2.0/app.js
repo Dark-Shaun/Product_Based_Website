@@ -154,11 +154,11 @@ app.post('/productPage',(req,res)=>{
 })
 
 // cart 
-app.get('/product-page/cart',(req,res)=>{
-    res.render('cart',{});
+app.get('/productPage/cart',(req,res)=>{
+    res.render('cart',{products:products});
 })
 
-app.post('/product-page/cart',(req,res)=>{
+app.post('/productPage/cart',(req,res)=>{
     const subscribe_mail=req.body.subscribe_mail;
     const search = req.body.search;
     // console.log(search)
@@ -166,11 +166,11 @@ app.post('/product-page/cart',(req,res)=>{
 })
 
 //wishlist
-app.get('/product-page/wishlist',(req,res)=>{
-    res.render('wishlist',{});
+app.get('/productPage/wishlist',(req,res)=>{
+    res.render('wishlist',{products:products});
 })
 
-app.post('/product-page/wishlist',(req,res)=>{
+app.post('/productPage/wishlist',(req,res)=>{
     const subscribe_mail=req.body.subscribe_mail;
     const search = req.body.search;
     // console.log(search)
@@ -178,10 +178,10 @@ app.post('/product-page/wishlist',(req,res)=>{
 })
 
 //Indiviual Product Page
-app.get('/product-page/product-name',(req,res)=>{
+app.get('/productPage/product-name',(req,res)=>{
     res.render('indiviual',{});
 })
-app.post('/product-page/product-name',(req,res)=>{
+app.post('/productPage/product-name',(req,res)=>{
 
 })
 
