@@ -243,10 +243,10 @@ hr {
 
 /* -------------------------------------------------------------------------------------------------------------------------------() */
 /* Cover Page */
-.body_cover{
+/* .body_cover{
   height:100%;
   font-family:"Merriweather Sans";
-}
+} */
 div.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
@@ -1720,7 +1720,7 @@ footer{
 
 
 
-@media (min-width:320px) and (max-width:968px) {
+@media (min-width:260px) and (max-width:968px) {
   .policy{
     display: none;
   }
@@ -1770,7 +1770,7 @@ footer{
 
   .card_2 {
     height: 480px;
-    width: 270px;
+    width: 300px;
     border-color: rgba(200, 200, 200, 0.5) !important;
   }
   .product_page{
