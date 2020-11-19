@@ -57,12 +57,17 @@
     }
 
   });
+  // $('#zoom_03').ezPlus({
+  //   zoomType: 'lens',
+  //   lensShape: 'round',
+  //   lensSize: 125
+  // });
 
 })(jQuery); // End of use strict
 
 
 $("#navbarDropdown").on("click", function(){
-  $(".dropdown-menu").slideToggle(300);
+  $(".dropdown-menu").slideToggle(400);
 });
 
 $(".card").on("mouseover", function(){
@@ -130,6 +135,12 @@ var arrow = document.querySelector(".arrow.bounce");
 arrow.addEventListener("click", function(){
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+
+
+// Indiviual Product Page 
+
 
 
 

@@ -1,53 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>Welcome Page</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="css/footer_1.css">
+<%- include("./partials/header") %>
 
 
-</head>
-
-<body class="=body_cover">
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" style="background-color: transparent;">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger " href="/" style="color:rgba(27, 38, 44, 1);font-weight: 100;">Brand Name</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-          class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          <li class="nav-item mx-2 my-2 my-lg-auto"><a class="nav-link js-scroll-trigger hvr-underline-from-left p-0" href="#footer"  style="color:rgba(27, 38, 44, 1);font-weight: 100;">About</a></li>
-
-          <li class="nav-item mx-2 my-2 my-lg-auto p-0"><a class="nav-link js-scroll-trigger hvr-underline-from-left p-0" href="#product"  style="color:rgba(27, 38, 44, 1);font-weight: 100;">Products</a></li>
-          <li class="nav-item mx-2 my-2 my-lg-auto p-0 contact"><a class="nav-link js-scroll-trigger hvr-underline-from-left p-0" href="#connect"  style="color:rgba(27, 38, 44, 1);font-weight: 100;">Contact</a></li>
-          <li class="nav-item mx-2 my-2 my-lg-auto p-0 dropdown" style="padding-top: 2px !important;">
-            <a class="nav-link hvr-icon-hang p-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="color:rgba(27, 38, 44, 1);font-weight: 100;">
-              Hi, Name
-              <i class="fa fa-chevron-down hvr-icon" ></i>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style=" left:-40px;   border:none; ">
-              <a class="dropdown-item" href="#" style="color: #6c757d;
-              font-weight: 400;">Action</a>
-              <!-- <div class="dropdown-divider"></div> -->
-              <a class="dropdown-item" href="#" style="color: #6c757d;
-              font-weight: 400;">Log-out</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
   <section id="home">
     <div class="masthead">
       <div class="container h-100">
@@ -58,10 +11,6 @@
           </div>
           <div class="col-lg-8 align-self-baseline">
             <p class="text-white-75 color-light font-weight-light mb-5 animate__animated animate__fadeInDown">This is where our Tagline goes!</p>
-            
-            <!-- <div class="col-12 mb-5">
-              <div class="small text-center text-muted animate__animated animate__fadeInDown">Copyright © 2020 - Brand-Name</div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -73,522 +22,59 @@
   </div>
 
   <div class="container-fluid" id="product">    
-  
     <section class="explore-products">
       <h1 class="text-center pt-5">Explore Company name Products</h1>
       <p class="text-center pt-3 text-secondary">Explore the collection of our Products.More to come soon!</p>
       <hr>
       <div class="row hidden my-5 ">
-        <div class="col-lg-3 col-sm-6">
-          <div class="d-flex justify-content-center">
-          <div class="card card_2 my-4">
-            <span class="actions pt-2 px-2 d-flex justify-content-between">
-              <!-- <a href="#" class="hide-link pl-1 d-flex align-items-center"><i class="fas fa-arrows-alt-h pr-1 "></i> Compare</a> -->
-              <button data-toggle="tooltip" data-placement="bottom" title="Add to Wishlist" class="rounded-circle px-1 d-flex justify-content-center align-items-center">
-                <i class="far fa-heart"></i>
-              </button>
-            </span>
-            <a href="#">
-                <img src="https://demo.createx.studio/cartzilla/img/shop/catalog/58.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title m-0">Headphones</h5>
-              <a href="#" class="product-link">
-              <p class="card-text">Wireless Bluetooth Headphones</p>
+        <% products.forEach((product) => { %>
+          <div class="col-lg-3 col-sm-6">
+            <div class="d-flex justify-content-center">
+            <div class="card card_2 my-4">
+              <span class="actions pt-2 px-2 d-flex justify-content-between">
+                <button data-toggle="tooltip" data-placement="bottom" title="Add to Wishlist" class="rounded-circle px-1 d-flex justify-content-center align-items-center">
+                  <i class="far fa-heart"></i>
+                </button>
+              </span>
+              <a href="#">
+                  <img src="<%= product.productImage%>" class="card-img-top" alt="...">
               </a>
-              <div class="price-rating d-flex justify-content-between">
-                <p class="dollar">$100.<span class="cent">00</span></p>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
+              <div class="card-body">
+                <h5 class="card-title m-0"><%=product.productCategory %></h5>
+                <a href="#" class="product-link">
+                <p class="card-text"><%= product.productName%></p>
+                </a>
+                <div class="price-rating d-flex justify-content-between">
+                  <p class="dollar">$100.<span class="cent">00</span></p>
+                  <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="hidden-tab d-none d-lg-block pb-2 container-fluid col-12 d-flex flex-column align-items-center">
-              <div class="hidden-content d-flex justify-content-center">
-                <a href="/login" data-toggle="tooltip" data-placement="bottom" title="Add to Cart" class="btn btn_1 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 cart"><i class="fas fa-shopping-cart "></i></a>
-                <a href="https://demo.createx.studio/cartzilla/img/shop/catalog/58.jpg" data-toggle="tooltip" data-placement="bottom" title="View Product" class="btn btn_2 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 eye pop-up"><i class="fas fa-eye "></i></a>
+              <div class="hidden-tab d-none d-lg-block pb-2 container-fluid col-12 d-flex flex-column align-items-center">
+                <div class="hidden-content d-flex justify-content-center">
+                  <a href="/login" data-toggle="tooltip" data-placement="bottom" title="Add to Cart" class="btn btn_1 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 cart"><i class="fas fa-shopping-cart "></i></a>
+                  <a href="<%= product.productImage%>" data-toggle="tooltip" data-placement="bottom" title="View Product" class="btn btn_2 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 eye pop-up"><i class="fas fa-eye "></i></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <div class="d-flex justify-content-center">
-          <div class="card card_2 my-4">
-            <span class="actions pt-2 px-2 d-flex justify-content-between">
-              <!-- <a href="#" class="hide-link pl-1 d-flex align-items-center"><i class="fas fa-arrows-alt-h pr-1 "></i> Compare</a> -->
-              <button data-toggle="tooltip" data-placement="bottom" title="Add to Wishlist" class="rounded-circle px-1 d-flex justify-content-center align-items-center">
-                <i class="far fa-heart m-1"></i>
-              </button>
-            </span>
-            <a href="#">
-                <img src="https://demo.createx.studio/cartzilla/img/shop/catalog/59.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title m-0">Headphones</h5>
-              <a href="#" class="product-link">
-              <p class="card-text">Wireless Bluetooth Headphones</p>
-              </a>
-              <div class="price-rating d-flex justify-content-between">
-                <p class="dollar">$100.<span class="cent">00</span></p>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-            </div>
-            <div class="hidden-tab d-none d-lg-block pb-2 container-fluid col-12 d-flex flex-column align-items-center">
-              <div class="hidden-content d-flex justify-content-center">
-                <a href="/login" data-toggle="tooltip" data-placement="bottom" title="Add to Cart" class="btn btn_1 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 cart"><i class="fas fa-shopping-cart "></i></a>
-                <a href="https://demo.createx.studio/cartzilla/img/shop/catalog/59.jpg" data-toggle="tooltip" data-placement="bottom" title="View Product" class="btn btn_2 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 eye pop-up"><i class="fas fa-eye "></i></a>
-              </div>
-            </div>
           </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <div class="d-flex justify-content-center">
-          <div class="card card_2 my-4">
-            <span class="actions pt-2 px-2 d-flex justify-content-between">
-              <!-- <a href="#" class="hide-link pl-1 d-flex align-items-center"><i class="fas fa-arrows-alt-h pr-1 "></i> Compare</a> -->
-              <button data-toggle="tooltip" data-placement="bottom" title="Add to Wishlist" class="rounded-circle px-1 d-flex justify-content-center align-items-center">
-                <i class="far fa-heart m-1"></i>
-              </button>
-            </span>
-            <a href="#">
-                <img src="https://demo.createx.studio/cartzilla/img/shop/catalog/60.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title m-0">Headphones</h5>
-              <a href="#" class="product-link">
-              <p class="card-text">Wireless Bluetooth Headphones</p>
-              </a>
-              <div class="price-rating d-flex justify-content-between">
-                <p class="dollar">$100.<span class="cent">00</span></p>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-            </div>
-            <div class="hidden-tab d-none d-lg-block pb-2 container-fluid col-12 d-flex flex-column align-items-center">
-              <div class="hidden-content d-flex justify-content-center">
-                <a href="/login" data-toggle="tooltip" data-placement="bottom" title="Add to Cart" class="btn btn_1 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 cart"><i class="fas fa-shopping-cart "></i></a>
-                <a href="https://demo.createx.studio/cartzilla/img/shop/catalog/60.jpg" data-toggle="tooltip" data-placement="bottom" title="View Product" class="btn btn_2 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 eye pop-up"><i class="fas fa-eye "></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <div class="d-flex justify-content-center">
-          <div class="card card_2 my-4">
-            <span class="actions pt-2 px-2 d-flex justify-content-between">
-              <!-- <a href="#" class="hide-link pl-1 d-flex align-items-center"><i class="fas fa-arrows-alt-h pr-1 "></i> Compare</a> -->
-              <button data-toggle="tooltip" data-placement="bottom" title="Add to Wishlist" class="rounded-circle px-1 d-flex justify-content-center align-items-center">
-                <i class="far fa-heart m-1"></i>
-              </button>
-            </span>
-            <a href="#">
-                <img src="https://demo.createx.studio/cartzilla/img/shop/catalog/61.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title m-0">Headphones</h5>
-              <a href="#" class="product-link">
-              <p class="card-text">Wireless Bluetooth Headphones</p>
-              </a>
-              <div class="price-rating d-flex justify-content-between">
-                <p class="dollar">$100.<span class="cent">00</span></p>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-            </div>
-            <div class="hidden-tab d-none d-lg-block pb-2 container-fluid col-12 d-flex flex-column align-items-center">
-              <div class="hidden-content d-flex justify-content-center">
-                <a href="/login" data-toggle="tooltip" data-placement="bottom" title="Add to Cart" class="btn btn_1 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 cart"><i class="fas fa-shopping-cart "></i></a>
-                <a href="https://demo.createx.studio/cartzilla/img/shop/catalog/61.jpg" data-toggle="tooltip" data-placement="bottom" title="View Product" class="btn btn_2 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 eye pop-up"><i class="fas fa-eye "></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        
-      </div>
-      <div class="row hidden my-5 second">
-        <div class="col-lg-3 col-sm-6">
-          <div class="d-flex justify-content-center">
-          <div class="card card_2 my-4">
-            <span class="actions pt-2 px-2 d-flex justify-content-between">
-              <!-- <a href="#" class="hide-link pl-1 d-flex align-items-center"><i class="fas fa-arrows-alt-h pr-1 "></i> Compare</a> -->
-              <button data-toggle="tooltip" data-placement="bottom" title="Add to Wishlist" class="rounded-circle px-1 d-flex justify-content-center align-items-center">
-                <i class="far fa-heart m-1"></i>
-              </button>
-            </span>
-            <a href="#">
-                <img src="https://demo.createx.studio/cartzilla/img/shop/catalog/62.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title m-0">Headphones</h5>
-              <a href="#" class="product-link">
-              <p class="card-text">Wireless Bluetooth Headphones</p>
-              </a>
-              <div class="price-rating d-flex justify-content-between">
-                <p class="dollar">$100.<span class="cent">00</span></p>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-            </div>
-            <div class="hidden-tab d-none d-lg-block pb-2 container-fluid col-12 d-flex flex-column align-items-center">
-              <div class="hidden-content d-flex justify-content-center">
-                <a href="/login" data-toggle="tooltip" data-placement="bottom" title="Add to Cart" class="btn btn-primary btn_1 hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 cart"><i class="fas fa-shopping-cart "></i></a>
-                <a href="https://demo.createx.studio/cartzilla/img/shop/catalog/62.jpg" data-toggle="tooltip" data-placement="bottom" title="View Product" class="btn btn_2 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 eye pop-up"><i class="fas fa-eye "></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <div class="d-flex justify-content-center">
-          <div class="card card_2 my-4">
-            <span class="actions pt-2 px-2 d-flex justify-content-between">
-              <!-- <a href="#" class="hide-link pl-1 d-flex align-items-center"><i class="fas fa-arrows-alt-h pr-1 "></i> Compare</a> -->
-              <button data-toggle="tooltip" data-placement="bottom" title="Add to Wishlist" class="rounded-circle px-1 d-flex justify-content-center align-items-center">
-                <i class="far fa-heart m-1"></i>
-              </button>
-            </span>
-            <a href="#">
-                <img src="https://demo.createx.studio/cartzilla/img/shop/catalog/63.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title m-0">Headphones</h5>
-              <a href="#" class="product-link">
-              <p class="card-text">Wireless Bluetooth Headphones</p>
-              </a>
-              <div class="price-rating d-flex justify-content-between">
-                <p class="dollar">$100.<span class="cent">00</span></p>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-            </div>
-            <div class="hidden-tab d-none d-lg-block pb-2 container-fluid col-12 d-flex flex-column align-items-center">
-              <div class="hidden-content d-flex justify-content-center">
-                <a href="/login" data-toggle="tooltip" data-placement="bottom" title="Add to Cart" class="btn btn-primary btn_1 hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 cart"><i class="fas fa-shopping-cart "></i></a>
-                <a href="https://demo.createx.studio/cartzilla/img/shop/catalog/63.jpg" data-toggle="tooltip" data-placement="bottom" title="View Product" class="btn btn_2 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 eye pop-up"><i class="fas fa-eye "></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <div class="d-flex justify-content-center">
-          <div class="card card_2 my-4">
-            <span class="actions pt-2 px-2 d-flex justify-content-between">
-              <!-- <a href="#" class="hide-link pl-1 d-flex align-items-center"><i class="fas fa-arrows-alt-h pr-1 "></i> Compare</a> -->
-              <button data-toggle="tooltip" data-placement="bottom" title="Add to Wishlist" class="rounded-circle px-1 d-flex justify-content-center align-items-center">
-                <i class="far fa-heart m-1"></i>
-              </button>
-            </span>
-            <a href="#">
-                <img src="https://demo.createx.studio/cartzilla/img/shop/catalog/64.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title m-0">Headphones</h5>
-              <a href="#" class="product-link">
-              <p class="card-text">Wireless Bluetooth Headphones</p>
-              </a>
-              <div class="price-rating d-flex justify-content-between">
-                <p class="dollar">$100.<span class="cent">00</span></p>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-            </div>
-            <div class="hidden-tab d-none d-lg-block pb-2 container-fluid col-12 d-flex flex-column align-items-center">
-              <div class="hidden-content d-flex justify-content-center">
-                <a href="/login" data-toggle="tooltip" data-placement="bottom" title="Add to Cart" class="btn btn-primary  btn_1  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 cart"><i class="fas fa-shopping-cart "></i></a>
-                <a href="https://demo.createx.studio/cartzilla/img/shop/catalog/64.jpg" data-toggle="tooltip" data-placement="bottom" title="View Product" class="btn btn_2 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 eye pop-up"><i class="fas fa-eye "></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <div class="d-flex justify-content-center">
-          <div class="card card_2 my-4">
-            <span class="actions pt-2 px-2 d-flex justify-content-between">
-              <!-- <a href="#" class="hide-link pl-1 d-flex align-items-center"><i class="fas fa-arrows-alt-h pr-1 "></i> Compare</a> -->
-              <button data-toggle="tooltip" data-placement="bottom" title="Add to Wishlist" class="rounded-circle px-1 d-flex justify-content-center align-items-center">
-                <i class="far fa-heart m-1"></i>
-              </button>
-            </span>
-            <a href="#">
-                <img src="https://demo.createx.studio/cartzilla/img/shop/catalog/65.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title m-0">Headphones</h5>
-              <a href="#" class="product-link">
-              <p class="card-text">Wireless Bluetooth Headphones</p>
-              </a>
-              <div class="price-rating d-flex justify-content-between">
-                <p class="dollar">$100.<span class="cent">00</span></p>
-                <p class="rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-            </div>
-            <div class="hidden-tab d-none d-lg-block pb-2 container-fluid col-12 d-flex flex-column align-items-center">
-              <div class="hidden-content d-flex justify-content-center">
-                <a href="/login" data-toggle="tooltip" data-placement="bottom" title="Add to Cart" class="btn btn-primary btn_1 hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 cart"><i class="fas fa-shopping-cart "></i></a>
-                <a href="https://demo.createx.studio/cartzilla/img/shop/catalog/65.jpg" data-toggle="tooltip" data-placement="bottom" title="View Product" class="btn btn_2 btn-primary  hidden-button p-1 d-flex justify-content-center align-items-center rounded-circle mx-3 eye pop-up"><i class="fas fa-eye "></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        
+        <% }) %>    
       </div>
     </section>
   </div>
-  <footer id="footer">
-    <div class="mt-5 p-4 w-100">
 
-
-      <div class="row">
-
-        <div class="col-lg-4 col-md-6 col-sm-12 catalogue">
-          <div class="d-flex justify-content-center">
-            <div class="size">
-              <div class="text-left">
-
-
-
-                <h5>Shop Departments</h5>
-                <br>
-                <p>Appliances</p>
-                <p>Comapny Approval</p>
-                <p>Buisness Product</p>
-                <p>Computer</p>
-                <p>Television</p>
-                <p>Shorts</p>
-                <p>Laptops</p>
-                <p>Accessories</p>
-                <p>Refridgerator</p>
-                <p>Apple Appliances</p>
-                <p>Electonical Appliances</p>
-
-
-
-              </div>
-            </div>
-
-
-          </div>
-
-
-
-          <hr>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 shipping">
-          <div class="d-flex justify-content-center">
-            <div class="size">
-              <div class="text-left">
-                <h5>Accounts and Shipping Info</h5>
-                <br>
-                <p>Your Account</p>
-                <p>Shipping rates & policies</p>
-                <p>Refunds and Replacements</p>
-                <p>Order Tracking</p>
-                <p>Delivery Info</p>
-                <p>Taxes &Fees</p>
-                <br>
-
-                <h5>About Us</h5>
-                <br>
-                <p>About Company</p>
-                <p>Our Teams</p>
-                <p>Careers</p>
-                <p>News</p>
-
-              </div>
-
-            </div>
-
-
-          </div>
-
-          <hr>
-        </div>
-        <div class="col-lg-4 col-md-12 col-sm-12 subscribe">
-          <div class="d-flex justify-content-center ">
-            <div class="text-left">
-              <h5>Stay Informed</h5>
-              <br>
-              <form class="" action="/" method="post">
-
-
-                <input type="email" class="form-control" placeholder="Enter email" id="email" name="subscribe_mail" >
-                <small>*If you want to be informed about our new Product.</small>
-
-                <div class="float-right">
-                  <button type="submit" name="button" class="m-1 rounded sub_button">Subscribe</button>
-
-                </div>
-
-              </form>
-              <div class="connect" id="connect">
-                <br>
-                <h5 class="mt-5 text-center">Connect with Us</h5>
-
-                <a href="mailto:comapny@example.com" class="mt-3">Mail us</a><br>
-                <div class="d-flex justify-content-center icon mb-3">
-                  <i class="fab fa-google feather "></i>
-                  <i class="fab fa-twitter feather  ml-5"></i>
-                  <i class="fab fa-facebook feather  ml-5"></i>
-                </div>
-                <p class="text-center mt-4">&copy; Company Name Ltd<p>
-
-
-
-              </div>
-
-
-            </div>
-
-
-
-
-
-          </div>
-
-        </div>
-
-      </div>
-      <hr>
-      <div class="row mt-4 policy">
-        <div class="col-lg-3 col-md-4 col-sm-12">
-          <div class="justify-content-center">
-            <span><i class="fas fa-rocket "></i></span>
-            <div class=" shape_1">
-              <div class="text-right">
-
-                <h6>Free and Fast Delivery</h6>
-                <small>Free Delivery for cart above 200$</small>
-              </div>
-
-            </div>
-
-
-          </div>
-          <hr>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-12">
-          <div class="justify-content-center">
-            <span><i class="fas fa-money-check-alt"></i></span>
-
-
-
-            <div class=" shape_2">
-              <div class="text-right">
-
-                <h6>Money Back Policy</h6>
-                <small>We refund payments within 30days</small>
-              </div>
-
-            </div>
-
-
-            <hr>
-          </div>
-
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-12">
-          <div class="justify-content-center">
-            <div class=" shape">
-              <i class="far fa-credit-card"></i>
-            </div>
-
-            <div class=" shape_3">
-              <div class="text-right">
-
-                <h6>Secure Online Payment</h6>
-                <small>Excellent online payment services.</small>
-              </div>
-
-            </div>
-
-
-            <hr>
-          </div>
-
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-12">
-          <div class="justify-content-center">
-            <div class="shape">
-              <i class="fas fa-headphones-alt"></i>
-            </div>
-
-            <div class=" shape_4">
-              <div class="text-right">
-
-                <h6>24/7 customer support</h6>
-                <small>Friendly 24/7 customer support</small>
-              </div>
-
-            </div>
-
-
-          </div>
-          <hr>
-        </div>
-
-      </div>
-
-    </div>
-  </footer>
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-    <script src="js/scripts.js"></script>
-    
-</body>
-
-</html>
+  <%- include("./partials/pageFooter") %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+<%- include("./partials/footer") %>

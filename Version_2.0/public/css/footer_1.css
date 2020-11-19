@@ -243,10 +243,10 @@ hr {
 
 /* -------------------------------------------------------------------------------------------------------------------------------() */
 /* Cover Page */
-.body_cover{
+/* .body_cover{
   height:100%;
   font-family:"Merriweather Sans";
-}
+} */
 div.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
@@ -753,6 +753,9 @@ button.rounded-circle:hover {
 .fa-shopping-cart,.fa-wallet{
   font-size: 1rem;
 }
+.tprice{
+  padding-left: 105px;
+}
 
 .checkout{
   position: relative;
@@ -761,7 +764,7 @@ button.rounded-circle:hover {
   border-radius:0 !important;
   width:180px;
   height:45px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   font-size:1.1rem;
   letter-spacing: 2px;
 }
@@ -1720,7 +1723,7 @@ footer{
 
 
 
-@media (min-width:320px) and (max-width:968px) {
+@media (min-width:260px) and (max-width:968px) {
   .policy{
     display: none;
   }
@@ -1762,6 +1765,9 @@ footer{
   .row div{
     margin-top:5px;
   }
+  .tprice{
+    padding: 0 ;
+  }
 
   .checkout{
     padding: 0 !important;
@@ -1770,7 +1776,7 @@ footer{
 
   .card_2 {
     height: 480px;
-    width: 270px;
+    width: 300px;
     border-color: rgba(200, 200, 200, 0.5) !important;
   }
   .product_page{

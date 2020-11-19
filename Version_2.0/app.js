@@ -7,11 +7,63 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 
+var products  = [
+    {
+        productImage:"https://demo.createx.studio/cartzilla/img/shop/catalog/58.jpg",
+        productCategory: "Headphones",
+        productName: "Wireless Bluetooth Headphones"
+
+    },
+    {
+        productImage:"https://demo.createx.studio/cartzilla/img/shop/catalog/59.jpg",
+        productCategory: "Headphones",
+        productName: "Wireless Bluetooth Headphones"
+
+    },
+    {
+        productImage:"https://demo.createx.studio/cartzilla/img/shop/catalog/60.jpg",
+        productCategory: "Headphones",
+        productName: "Wireless Bluetooth Headphones"
+
+    },
+    {
+        productImage:"https://demo.createx.studio/cartzilla/img/shop/catalog/61.jpg",
+        productCategory: "Headphones",
+        productName: "Wireless Bluetooth Headphones"
+
+    },
+    {
+        productImage:"https://demo.createx.studio/cartzilla/img/shop/catalog/62.jpg",
+        productCategory: "Headphones",
+        productName: "Wireless Bluetooth Headphones"
+
+    },
+    {
+        productImage:"https://demo.createx.studio/cartzilla/img/shop/catalog/63.jpg",
+        productCategory: "Headphones",
+        productName: "Wireless Bluetooth Headphones"
+
+    },
+    {
+        productImage:"https://demo.createx.studio/cartzilla/img/shop/catalog/64.jpg",
+        productCategory: "Headphones",
+        productName: "Wireless Bluetooth Headphones"
+
+    },
+    {
+        productImage:"https://demo.createx.studio/cartzilla/img/shop/catalog/65.jpg",
+        productCategory: "Headphones",
+        productName: "Wireless Bluetooth Headphones"
+
+    }
+]
+
+
 
 
 // Cover Page
 app.get('/', (req, res)=>{
-    res.render('cover',{});
+    res.render('cover', {products: products});
 }) 
 
 app.post('/',(req,res)=>{
@@ -90,11 +142,11 @@ app.post('/billing',(req,res)=>{
 
 
 // Product Page
-app.get('/product-page',(req,res)=>{
-    res.render('product_page',{});
+app.get('/productPage',(req,res)=>{
+    res.render('product_page',{products: products});
 })
 
-app.post('/product-page',(req,res)=>{
+app.post('/productPage',(req,res)=>{
     const subscribe_mail=req.body.subscribe_mail;
     const search = req.body.search;
     // console.log(search)
@@ -102,11 +154,11 @@ app.post('/product-page',(req,res)=>{
 })
 
 // cart 
-app.get('/product-page/cart',(req,res)=>{
-    res.render('cart',{});
+app.get('/productPage/cart',(req,res)=>{
+    res.render('cart',{products:products});
 })
 
-app.post('/product-page/cart',(req,res)=>{
+app.post('/productPage/cart',(req,res)=>{
     const subscribe_mail=req.body.subscribe_mail;
     const search = req.body.search;
     // console.log(search)
@@ -114,11 +166,11 @@ app.post('/product-page/cart',(req,res)=>{
 })
 
 //wishlist
-app.get('/product-page/wishlist',(req,res)=>{
-    res.render('wishlist',{});
+app.get('/productPage/wishlist',(req,res)=>{
+    res.render('wishlist',{products:products});
 })
 
-app.post('/product-page/wishlist',(req,res)=>{
+app.post('/productPage/wishlist',(req,res)=>{
     const subscribe_mail=req.body.subscribe_mail;
     const search = req.body.search;
     // console.log(search)
@@ -126,10 +178,10 @@ app.post('/product-page/wishlist',(req,res)=>{
 })
 
 //Indiviual Product Page
-app.get('/product-page/product-name',(req,res)=>{
+app.get('/productPage/product-name',(req,res)=>{
     res.render('indiviual',{});
 })
-app.post('/product-page/product-name',(req,res)=>{
+app.post('/productPage/product-name',(req,res)=>{
 
 })
 
