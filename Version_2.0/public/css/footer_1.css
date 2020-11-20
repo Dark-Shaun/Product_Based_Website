@@ -1415,8 +1415,14 @@ border-color:#fe696a;
   height:200px !important;
 
 }
+
+
+/* =====================================
+ Individual page
+ =======================================
+*/
 section.product{
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .product-pic{
@@ -1465,7 +1471,6 @@ opacity:0.6;
 
 .add-to-cart{
   background:#fe696a;
-  border-radius: 0px;
   color:#fff;
   border-radius: 5px;
 }
