@@ -179,7 +179,45 @@ app.post('/productPage/wishlist',(req,res)=>{
 
 //Indiviual Product Page
 app.get('/productPage/product-name',(req,res)=>{
-    res.render('indiviual',{});
+    var product = {
+        productImage:"https://demo.createx.studio/cartzilla/img/shop/catalog/58.jpg",
+        productName: "Wireless Bluetooth Headphones",
+        productDescription: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, maxime quam ex aut quisquam, eaque reprehenderit doloribus eligendi earum corrupti vel ab facere iste ad recusandae ullam quaerat inventore vero?"
+    }
+    var reviews = [
+        {
+            username:"Mark James",
+            comment: "Nice product!",
+            commentDate: "October 25, 2019"
+        },
+        {
+            username:"Mark James",
+            comment: "Nice product!",
+            commentDate: "October 25, 2019"
+        },
+        {
+            username:"Mark James",
+            comment: "Nice product!",
+            commentDate: "October 25, 2019"
+        },
+        {
+            username:"Mark James",
+            comment: "Nice product!",
+            commentDate: "October 25, 2019"
+        },
+        {
+            username:"Mark James",
+            comment: "Nice product!",
+            commentDate: "October 25, 2019"
+        },
+        {
+            username:"Mark James",
+            comment: "Nice product!",
+            commentDate: "October 25, 2019"
+        }
+
+    ]
+    res.render('individual',{product:product, reviews:reviews});
 })
 app.post('/productPage/product-name',(req,res)=>{
 
