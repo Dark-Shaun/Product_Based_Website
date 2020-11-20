@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <title>Bill Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kalam:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;700&family=Source+Code+Pro&family=Source+Sans+Pro:ital,wght@0,700;0,900;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/footer_1.css">
-  
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand " href="/">Brand Name</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-          class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-5 my-lg-0">
-          <li class="nav-item"><a class="nav-link js-scroll-trigger hvr-underline-from-left" href="#footer">About</a></li>
-
-          <li class="nav-item "><a class="nav-link js-scroll-trigger hvr-underline-from-left" href="/product-page">Products</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger hvr-underline-from-left" href="#connect">Contact</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link hvr-icon-hang" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Hi,Name <i class="fa fa-chevron-down hvr-icon"></i>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Log-out</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<%- include("./partials/newHeader")%>
   <div class="container_1 container">
     <br>
     <br>
@@ -51,40 +6,48 @@
       <div class="col-md-4 order-md-2 mb-4 pt-5">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-muted">Your cart</span>
-          <span class="badge badge-secondary badge-pill">3</span>
+          <span class="badge badge-secondary badge-pill"><%=billProducts.length - 1 %></span>
         </h4>
         <ul class="list-group mb-3">
+         <% billProducts.forEach((product)=>{%>
+          <% if(product.productName ==="PromoCode"){%>
+            <% totalPrice=totalPrice-product.productPrice%>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+                <h6 class="my-0"> <%=product.productName %></h6>
+                <small><%=product.productCategory %></small>
+              </div>
+              <span class="text-success">-$<%=product.productPrice %></span>
+            </li>
+            <% }else{%>
+              <%  totalPrice=totalPrice+product.productPrice %>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
-              <h6 class="my-0">Product name</h6>
-              <small class="text-muted">Brief description</small>
+              <h6 class="my-0"><%=product.productName %></h6>
+              <small class="text-muted"><%=product.productCategory %></small>
             </div>
-            <span class="text-muted">$12</span>
+            <span class="text-muted">$<%=product.productPrice %></span>
           </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <%}%>
+       <% })%>
+          <!-- <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
               <h6 class="my-0">Second product</h6>
               <small class="text-muted">Brief description</small>
             </div>
             <span class="text-muted">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
+          </li> -->
+          <!-- <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
               <h6 class="my-0">Third item</h6>
               <small class="text-muted">Brief description</small>
             </div>
             <span class="text-muted">$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between bg-light">
-            <div class="text-success">
-              <h6 class="my-0">Promo code</h6>
-              <small>EXAMPLECODE</small>
-            </div>
-            <span class="text-success">-$5</span>
-          </li>
+          </li> -->
+          
           <li class="list-group-item d-flex justify-content-between">
             <span>Total (USD)</span>
-            <strong>$20</strong>
+            <strong>$<%=totalPrice%></strong>
           </li>
         </ul>
 

@@ -114,11 +114,35 @@ app.post('/pricing',(req,res)=>{
 })
 // Billing Page
 app.get('/billing',(req,res)=>{
-    res.render('billing',{});
+    var totalPrice=0;
+    var billProducts=[
+        {
+            productName:"Wireless Bluetooth Headphones",
+            productPrice:10,
+            productCategory:"Headphones"
+        },
+        {
+            productName:"Wireless Bluetooth Headphones",
+            productPrice:10,
+            productCategory:"Headphones"
+        },
+        {
+            productName:"Wireless Bluetooth Headphones",
+            productPrice:10,
+            productCategory:"Headphones"
+        },
+        
+        
+        {
+            productName:"PromoCode",
+            productPrice:5,
+            productCategory:"CODE"
+        }
+    ]
+    res.render('billing',{billProducts:billProducts,totalPrice:totalPrice});
 })
 
 app.post('/billing',(req,res)=>{
-    // let subscribe_mail=req.body.subscribe_mail;
     const fname=req.body.fname;
     const lname=req.body.lname;
     const email=req.body.email;
@@ -127,14 +151,6 @@ app.post('/billing',(req,res)=>{
     const state = req.body.state;
     const zip=req.body.zip;
     const redeem=req.body.redeem;
-    // console.log(fname)
-    // console.log(lname)
-    // console.log(email)
-    // console.log(address)
-    // console.log(country)
-    // console.log(state)
-    // console.log(zip)
-    // res.redirect();
     res.redirect("/billing");
 })
 
@@ -219,6 +235,7 @@ app.get('/productPage/product-name',(req,res)=>{
     ]
     res.render('individual',{product:product, reviews:reviews});
 })
+
 app.post('/productPage/product-name',(req,res)=>{
 
 })
