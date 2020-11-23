@@ -204,32 +204,38 @@ app.get('/productPage/product-name',(req,res)=>{
         {
             username:"Mark James",
             comment: "Nice product!",
-            commentDate: "October 25, 2019"
+            commentDate: "October 25, 2019",
+            rating:2
         },
         {
             username:"Mark James",
             comment: "Nice product!",
-            commentDate: "October 25, 2019"
+            commentDate: "October 25, 2019",
+            rating:4
         },
         {
             username:"Mark James",
             comment: "Nice product!",
-            commentDate: "October 25, 2019"
+            commentDate: "October 25, 2019",
+            rating:1
         },
         {
             username:"Mark James",
             comment: "Nice product!",
-            commentDate: "October 25, 2019"
+            commentDate: "October 25, 2019",
+            rating:5
         },
         {
             username:"Mark James",
             comment: "Nice product!",
-            commentDate: "October 25, 2019"
+            commentDate: "October 25, 2019",
+            rating:4
         },
         {
             username:"Mark James",
             comment: "Nice product!",
-            commentDate: "October 25, 2019"
+            commentDate: "October 25, 2019",
+            rating:3
         }
 
     ]

@@ -101,11 +101,9 @@
                     <span class="date"><%= review.commentDate %></5></span>
                   </p>
                   <p class="user-rating">
+                    <%  for(i=0;i<review.rating;i++){ %>
                     <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <%  } %>
                   </p>
                 </div>
                 <div class="comment">

@@ -1,16 +1,4 @@
-<html style="overflow: hidden;">
-    <head>
-        <title>Login</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86"> -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link href="/css/login.css" rel="stylesheet">
-    </head>
-    
-    <body>
+<%-include("./partials/loginHeader") %>
 
         <div class="container-fluid page d-flex justify-content-center align-items-center">
             <div class="main-container px-3 pb-3 pt-0 d-flex flex-column justify-content-center align-items-center">
@@ -58,6 +46,8 @@
 
                         <p class="text-muted_1 sign-up-now text-center mb-1">Not a member?<a href="/signup" class="text-muted_1 sign-up">Sign-up Now</a></p>
                         <p class="text-muted_1 forgot-password text-center mb-0"><a href="/fpassword" class="text-muted_1">Forgot Password?</a></p>
+                        
+                        <p class="text-muted_1 forgot-password text-center mb-0 mt-2"><a href="/fpassword" class="text-muted_1 " style="letter-spacing: 1px;"> Back to Home Page </a></p>
 
                     </div>
                 </div>
@@ -65,5 +55,5 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/js/login.js"></script>
-    </body>
-</html>
+
+  <%-include("./partials/footer")%>
